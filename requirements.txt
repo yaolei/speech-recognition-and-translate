@@ -1,0 +1,6 @@
+flask
+speech_recognition
+flask_cors
+SocketIO
+SimpleWebSocketServer
+openai

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Live Webcam</title></head>
+    <body>
+        <h1>Live streaming</h1>
+        <div>
+            <a href="./speech" >Click Me</a>
+            
+            <form method="post"  action="/foward">
+                <input type="submit" value="Take actions">
+            </form>
+            <div id="fch_v">
+                {{message}}
+            </div>
+            <video autoplay="autoplay" controls="controls" preload="preload">
+                <!-- <source src="{{ url_for('static', filename='OSR_us_000_0010_8k.wav') }}"></source> -->
+                <source src="{{ url_for('static', filename='test-stream.wav') }}"></source>
+            </video>
+
+
+
+
+                <!-- <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file"/>
+        <br>
+        <input type="submit" id="submitButton" value="Transcribe"/>
+    </form>
+
+    {% if transcript != "" %}
+        <div id="speechTranscriptContainer">
+            <h1>Transcript</h1>
+            <p id="speechText">{{ transcript }}</p>
+        </div>
+    {% endif %} -->
+        </div>
+    </body>
+</html>
