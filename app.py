@@ -8,6 +8,7 @@ import hashlib
 import urllib
 import random
 
+
 import time
 
 sys.path.append('./')
@@ -36,7 +37,6 @@ class SimpleChat(WebSocket):
     def handleMessage(self):
         # echo message back to client
         language = self.data
-        
         r = sr.Recognizer()
         with sr.Microphone() as source:
             r.adjust_for_ambient_noise(source)
@@ -66,8 +66,8 @@ class SimpleChat(WebSocket):
         
     def handleClose(self):
         print(self.address, 'closed')
-server = SimpleWebSocketServer('', 8002, SimpleChat)
 
+server = SimpleWebSocketServer('', 8002, SimpleChat)
 
 def translateWoldToChinese(msg):
 
